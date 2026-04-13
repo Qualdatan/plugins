@@ -9,6 +9,12 @@ listet sie auf.
 **Status**: Scaffold. Phase C fuellt `manager`, `registry`, `loader`,
 `verify`, `cache`, `server_client`, `bundle` mit Leben.
 
+## Dokumentation
+
+- Live-Site: https://qualdatan.github.io/plugins/
+- Lokaler Preview: `pip install -e ".[docs]" && mkdocs serve`
+- Docs-Policy und -Struktur: [CLAUDE.md](CLAUDE.md)
+
 ## Lizenz
 
 AGPL-3.0-only — siehe [LICENSE](LICENSE).
