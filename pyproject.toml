@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qualdatan-plugins"
+version = "0.1.0"
+description = "Plugin manager for Qualdatan: discover, install, verify and load bundles (YAML data packs) from local paths or GitHub tap-style repos."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "AGPL-3.0-only"
+authors = [
+    { name = "Friedrich Schroedter" },
+]
+keywords = ["plugin-manager", "bundles", "qualdatan", "yaml"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries",
+    "License :: OSI Approved :: GNU Affero General Public License v3",
+]
+
+dependencies = [
+    "qualdatan-core>=0.1,<0.2",
+    "pyyaml>=6.0",
+    "httpx>=0.27",
+    "platformdirs>=4.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "ruff>=0.4",
+]
+
+[project.urls]
+Homepage = "https://github.com/GeneralPawz/Qualdatan"
+Repository = "https://github.com/Qualdatan/plugins"
+Issues = "https://github.com/Qualdatan/plugins/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+ignore = ["E501", "B008"]
