@@ -49,6 +49,9 @@ where = ["src"]
 [tool.pytest.ini_options]
 minversion = "7.0"
 testpaths = ["tests"]
+markers = [
+    "network: tests that would hit the network (stubbed by default)",
+]
 
 [tool.ruff]
 target-version = "py311"
